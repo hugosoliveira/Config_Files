@@ -1,4 +1,6 @@
 nvim/
+libaccounts-glib/
+KDE/
 'Microsoft Teams - Preview'/
 Microsoft/
 autostart/
@@ -70,8 +72,9 @@ kgammarc
 kfontinstuirc
 kdeglobals
 kded_device_automountrc
-kconf_updatedrc
+kconf_updaterc
 kcminputrc
 kateschemarc
 kactivitymanagerdrc
 kactivitymanagerc-statsrc
+
