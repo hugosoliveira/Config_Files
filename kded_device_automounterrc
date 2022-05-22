@@ -1,0 +1,25 @@
+[Devices][/org/freedesktop/UDisks2/block_devices/dm_2d1]
+EverMounted=true
+Icon=drive-harddisk-root
+LastNameSeen=70.0 GiB Internal Drive (dm-1)
+LastSeenMounted=true
+
+[Devices][/org/freedesktop/UDisks2/block_devices/dm_2d2]
+EverMounted=true
+Icon=drive-harddisk
+LastNameSeen=376.1 GiB Internal Drive (dm-2)
+LastSeenMounted=true
+
+[Devices][/org/freedesktop/UDisks2/block_devices/sda1]
+Icon=drive-harddisk
+LastNameSeen=500.0 MiB Internal Drive (sda1)
+
+[Devices][/org/freedesktop/UDisks2/block_devices/sda2]
+EverMounted=true
+Icon=drive-harddisk
+LastNameSeen=500.0 MiB Internal Drive (sda2)
+LastSeenMounted=true
+
+[Devices][/org/freedesktop/UDisks2/block_devices/sda3]
+Icon=drive-harddisk
+LastNameSeen=446.2 GiB Encrypted Drive
