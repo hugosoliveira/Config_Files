@@ -1,11 +1,16 @@
 """
-***************************
-* |  |  |  |              *
-* |  |__|  |              *
-* |   __   |              *
-* |__|  |__| UGO OLIVEIRA *
-*                         *
-***************************
+    _    _
+   | |  | |
+   | |__| |_   _  __ _  ___
+   |  __  | | | |/ _` |/ _ \
+   | |  | | |_| | (_| | (_) |
+   |_|__|_|\__,_|\__, |\___/
+    / __ \| (_)   __/ | (_)
+   | |  | | |___ |___/__ _ _ __ __ _
+   | |  | | | \ \ / / _ \ | '__/ _` |
+   | |__| | | |\ V /  __/ | | | (_| |
+    \____/|_|_| \_/ \___|_|_|  \__,_|
+
 Adapted by Hugo Oliveira.
 """
 import os
@@ -18,6 +23,7 @@ from libqtile import hook
 from libqtile import bar, layout, widget
 from libqtile.config import Click, Drag, Group, Key, Match, Screen, ScratchPad, DropDown
 from libqtile.lazy import lazy
+
 from libqtile.utils import guess_terminal
 
 @hook.subscribe.startup_once
