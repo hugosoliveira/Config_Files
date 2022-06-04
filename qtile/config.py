@@ -10,7 +10,6 @@
    | |  | | | \ \ / / _ \ | '__/ _` |
    | |__| | | |\ V /  __/ | | | (_| |
     \____/|_|_| \_/ \___|_|_|  \__,_|
-
 Adapted by Hugo Oliveira.
 """
 import os
@@ -145,7 +144,12 @@ layouts = [
         margin = [5,5,5,5],
         ),
 
-    layout.Max(),
+    layout.Max(
+        border_width=4,
+        fair = False,
+        margin_on_single = [5, 5, 5, 5],
+        margin = [5,5,5,5],
+    ),
     # Try more layouts by unleashing below layouts.
     #layout.Stack(num_stacks=2),
     #layout.Bsp(),
@@ -180,7 +184,7 @@ screens = [
             [
                 widget.GroupBox(
                     font = font_chosen,
-                    fontsize = 27,
+                    fontsize = 19,
                     margin_y = 4,
                     margin_x = 3,
                     padding_y = 5,
@@ -224,7 +228,11 @@ screens = [
                 #    },
                 #    name_transform=lambda name: name.upper(),
                 #),
-
+               # widget.CurrentScreen(
+               #     active_color = colors[2],
+               #     foreground = colors[2],
+               #     background = colors[0]
+               #     ),
                 widget.Systray(
                     foreground = colors[2],
                     background = colors[0],

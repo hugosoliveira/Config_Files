@@ -11,4 +11,4 @@ colors = [["#32302f", "#32302f"], #background
 
 font_size = 15
 
-font_chosen = "MesloLGS NF Bold"
+font_chosen = "Ubuntu"
