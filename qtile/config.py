@@ -233,6 +233,7 @@ screens = [
                #     foreground = colors[2],
                #     background = colors[0]
                #     ),
+
                 widget.Systray(
                     foreground = colors[2],
                     background = colors[0],
