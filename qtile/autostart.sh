@@ -1,13 +1,12 @@
 #!/bin/sh
-nm-applet &
-volumeicon &
+#nm-applet &
+#volumeicon &
 insync quit &
 insync start &
 mictray &
-~/Applications/Nextcloud.Appimage
+~/Applications/Nextcloud.AppImage &
 nitrogen --restore &
 flameshot &
 picom &
-xfce4-power-manager &
+#xfce4-power-manager &
 blueman-applet &
-redshift &

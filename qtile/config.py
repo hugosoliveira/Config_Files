@@ -20,6 +20,7 @@ from typing import List
 from customization import colors, font_size, font_chosen
 from libqtile import hook
 from libqtile import bar, layout, widget
+from libqtile import qtile
 from libqtile.config import Click, Drag, Group, Key, Match, Screen, ScratchPad, DropDown
 from libqtile.lazy import lazy
 
@@ -184,7 +185,7 @@ screens = [
             [
                 widget.GroupBox(
                     font = font_chosen,
-                    fontsize = 19,
+                    fontsize = 15,
                     margin_y = 4,
                     margin_x = 3,
                     padding_y = 5,
@@ -202,15 +203,27 @@ screens = [
                     foreground = colors[2],
                     background = colors[0]
                 ),
-
-                widget.CurrentLayoutIcon(
-                    custom_icon_paths = [os.path.expanduser("~/.config/qtile/icons")],
+                widget.TextBox(
+                    text=' | ',
+                    foreground = colors[2],
+                    background = colors[0],
+                    ),
+                    
+                widget.CurrentLayout(
+                    #custom_icon_paths = [os.path.expanduser("~/.config/qtile/icons")],
                     foreground = colors[2],
                     background = colors[0],
                     fontsize = font_size,
                     padding = 0,
                     scale = 0.7,
                     ),
+
+                widget.TextBox(
+                    text=' | ',
+                    foreground = colors[2],
+                    background = colors[0],
+                    ),
+
                 widget.Prompt(
                     foreground = colors[2],
                     background = colors[0],
@@ -233,12 +246,76 @@ screens = [
                #     foreground = colors[2],
                #     background = colors[0]
                #     ),
+                widget.TextBox(
+                    text='',
+                    foreground = colors[2],
+                    background = colors[0],
+                    ),
+                widget.Wlan(
+                    foreground = colors[2],
+                    background = colors[0],
+                    disconnected_message = 'No Internet',
+                    font = font_chosen,
+                    update_interval = 5,
+                    format='{essid} - {percent:2.0%}',
+                ),
+
+                widget.TextBox(
+                    text=' | ',
+                    foreground = colors[2],
+                    background = colors[0],
+                    ),
 
                 widget.Systray(
                     foreground = colors[2],
                     background = colors[0],
                     font = font_chosen,
                     ),
+
+                widget.TextBox(
+                    text=' | ',
+                    foreground = colors[2],
+                    background = colors[0],
+                    ),
+
+                widget.Battery(
+                    battery = 0,
+                    charge_char=' Charging',
+                    discharge_char=' Descharging',
+                    #full_char = 'Battery Full',
+                    unknown_char=' --',
+                    font=font_chosen,
+                    fontsize= font_size,
+                    foreground=colors[2],
+                    background = colors[0],
+                    low_foreground=colors[0],
+                    format="{percent:2.0%} {char}",
+                    low_percentage=0.2,
+                    notify_below=20,
+                    update_interval=10,
+                ),
+
+                widget.TextBox(
+                    text=' | ',
+                    foreground = colors[2],
+                    background = colors[0],
+                    ),
+
+              widget.Volume(
+                    foreground = colors[2],
+                    background = colors[0],
+                    fmt = ' {}',
+                    padding = 5,
+                    mouse_callbacks = {'Button1': lambda: qtile.cmd_spawn('pavucontrol')},
+                    #emoji = True,
+                    ),
+
+                widget.TextBox(
+                    text=' | ',
+                    foreground = colors[2],
+                    background = colors[0],
+                    ),
+
                 widget.Clock(
                     format="%d-%m-%Y  %I:%M %p",
                     foreground = colors[2],
@@ -246,6 +323,13 @@ screens = [
                     fontsize = font_size,
                     font = font_chosen,
                     ),
+
+                widget.TextBox(
+                    text=' | ',
+                    foreground = colors[2],
+                    background = colors[0],
+                    ),
+
                 widget.QuickExit(
                     foreground = colors[2],
                     background = colors[0],
@@ -254,7 +338,7 @@ screens = [
                     font = font_chosen
                     ),
             ],
-            34,
+            28,
             # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
             # border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
         ),
