@@ -118,10 +118,10 @@ keys = [
 #        ]
 #    )
 
-group_names = [("", {'layout': 'columns',}),
+group_names = [("", {'layout': 'columns',}),
                #("", {'layout': 'columns', 'matches':[Match(wm_class=["Alacritty"])]}),
                ("", {'layout': 'columns',}),
-               ("", {'layout': 'columns'}),
+               ("", {'layout': 'columns'}),
                ("", {'layout': 'columns', 'matches':[Match(wm_class=["libreoffice-writer", "", "", "", ""])]}),
                ("", {'layout': 'columns', 'matches':[Match(wm_class=["code-oss", "gedit"])]}),
                ("", {'layout': 'columns', 'matches':[Match(wm_class=["Telegram", "TelegramDesktop"])]}),
